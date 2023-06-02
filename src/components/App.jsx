@@ -6,7 +6,7 @@ import { Loader } from './Loader/Loader';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
-import {addImages} from './api';
+import { addImages } from './api';
 
 import './styles.css';
 
@@ -56,16 +56,16 @@ export class App extends Component {
 
   handleFormSubmit = query => {
     this.setState({ query, page: 1 });
-  }
+  };
   render() {
     const { images, totalHits, loading } = this.state;
     return (
       <>
-        <Searchbar onSubmit={this.handleFormSubmit}/>
+        <Searchbar onSubmit={this.handleFormSubmit} />
         {images && <ImageGallery images={images} />}
         {!!totalHits && <Button onLoadMore={this.handleLoadMore} />}
         {loading && <Loader />}
-        <ToastContainer autoClose={2000}/>
+        <ToastContainer autoClose={2000} />
       </>
     );
   }
