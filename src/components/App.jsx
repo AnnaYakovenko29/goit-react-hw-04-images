@@ -6,7 +6,7 @@ import { Loader } from './Loader/Loader';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
-import { addImages } from './api';
+import { addImages } from 'Api/api';
 
 import './styles.css';
 
